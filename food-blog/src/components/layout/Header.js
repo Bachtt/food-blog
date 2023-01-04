@@ -33,6 +33,7 @@ const HeaderStyles = styled.header`
   .logo {
     display: block;
     max-width: 50px;
+    border-radius: 100%;
   }
   .menu {
     display: flex;
@@ -84,7 +85,7 @@ const Header = () => {
       <div className="container">
         <div className="header-main">
           <NavLink to="/">
-            <img srcSet="/logo.png 2x" alt="monkey-blogging" className="logo" />
+            <img srcSet="./images/logo.png 2x" alt="food-blog" className="logo" />
           </NavLink>
           <ul className="menu">
             {menuLinks.map((item) => (

@@ -59,7 +59,7 @@ const HomeBanner = () => {
       <div className="container">
         <div className="banner">
           <div className="banner-content">
-            <h1 className="banner-heading">Monkey Blogging</h1>
+            <h1 className="banner-heading">Foody Blog</h1>
             <p className="banner-desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laudantium magnam similique accusantium natus esse facilis!
@@ -71,7 +71,7 @@ const HomeBanner = () => {
             </Button>
           </div>
           <div className="banner-image">
-            <img src="/img-banner.png" alt="banner" />
+            <img src="./images/logo1.jpg" alt="banner" />
           </div>
         </div>
       </div>

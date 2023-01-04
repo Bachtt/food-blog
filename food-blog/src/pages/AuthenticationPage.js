@@ -7,6 +7,9 @@ const AuthenticationPageStyles = styled.div`
   padding: 40px;
   .logo {
     margin: 0 auto 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
   }
   .heading {
     text-align: center;
@@ -35,11 +38,11 @@ const AuthenticationPage = ({ children }) => {
     <AuthenticationPageStyles>
       <div className="container">
         <div className="text-center">
-          <NavLink to="/" className="inline-block">
-            <img srcSet="/logo.png 2x" alt="monkey-blogging" className="logo" />
+          <NavLink to="/" className="inline-block ">
+            <img srcSet="./images/logo.png 2x" alt="food-blog" className="logo" />
           </NavLink>
         </div>
-        <h1 className="heading">Monkey Blogging</h1>
+        <h1 className="heading">Foody Blog</h1>
         {children}
       </div>
     </AuthenticationPageStyles>
