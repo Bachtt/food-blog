@@ -1,8 +1,8 @@
-import { useAuth } from "contexts/auth-context";
-import PageNotFound from "pages/PageNotFound";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import { useAuth } from "../../contexts/auth-context";
+import PageNotFound from "../../pages/PageNotFound";
 import DashboardHeader from "./DashboardHeader";
 import Sidebar from "./Sidebar";
 const DashboardStyles = styled.div`

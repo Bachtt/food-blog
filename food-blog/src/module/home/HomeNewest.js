@@ -1,5 +1,3 @@
-import Heading from "components/layout/Heading";
-import { db } from "firebase-app/firebase-config";
 import {
   collection,
   limit,
@@ -7,11 +5,13 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import PostNewestItem from "module/post/PostNewestItem";
-import PostNewestLarge from "module/post/PostNewestLarge";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { v4 } from "uuid";
+import Heading from "../../components/layout/Heading";
+import { db } from "../../firebase-app/firebase-config";
+import PostNewestItem from "../post/PostNewestItem";
+import PostNewestLarge from "../post/PostNewestLarge";
 
 const HomeNewestStyles = styled.div`
   .layout {

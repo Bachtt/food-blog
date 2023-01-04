@@ -1,6 +1,5 @@
-import { Table } from "components/table";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import React from "react";
+import DashboardHeading from "../module/dashboard/DashboardHeading";
 
 const DashboardPage = () => {
   return (

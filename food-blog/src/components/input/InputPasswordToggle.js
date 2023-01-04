@@ -1,5 +1,6 @@
-import { IconEyeClose, IconEyeOpen } from "components/icon";
 import React, { Fragment, useState } from "react";
+import IconEyeClose from "../icon/IconEyeClose";
+import IconEyeOpen from "../icon/IconEyeOpen";
 import Input from "./Input";
 
 const InputPasswordToggle = ({ control }) => {

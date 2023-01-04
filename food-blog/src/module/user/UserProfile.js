@@ -1,11 +1,11 @@
-import { Button } from "components/button";
-import { Field } from "components/field";
-import ImageUpload from "components/image/ImageUpload";
-import { Input } from "components/input";
-import { Label } from "components/label";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import React from "react";
 import { useForm } from "react-hook-form";
+import Button from "../../components/button/Button";
+import Field from "../../components/field/Field";
+import ImageUpload from "../../components/image/ImageUpload";
+import { Input } from "../../components/input";
+import Label from "../../components/label/Label";
+import DashboardHeading from "../dashboard/DashboardHeading";
 
 const UserProfile = () => {
   const { control } = useForm({

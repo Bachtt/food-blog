@@ -1,8 +1,3 @@
-import { Button } from "components/button";
-import { Field } from "components/field";
-import { Input } from "components/input";
-import { Label } from "components/label";
-import { useAuth } from "contexts/auth-context";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -11,8 +6,13 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "firebase-app/firebase-config";
-import InputPasswordToggle from "components/input/InputPasswordToggle";
+import Button from "../components/button/Button";
+import Field from "../components/field/Field";
+import Label from "../components/label/Label";
+import InputPasswordToggle from "../components/input/InputPasswordToggle";
+import { auth } from "../firebase-app/firebase-config";
+import { Input } from "../components/input";
+import { useAuth } from "../contexts/auth-context";
 
 const schema = yup.object({
   email: yup
@@ -82,7 +82,7 @@ const SignInPage = () => {
         </Field>
         <div className="have-account">
           You have not had an account?{" "}
-          <NavLink to={"/sign-up"}>Register an account</NavLink>{" "}
+          <NavLink to={"/signup"}>Register an account</NavLink>{" "}
         </div>
         <Button
           type="submit"

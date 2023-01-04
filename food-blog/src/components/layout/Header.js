@@ -1,8 +1,8 @@
-import { Button } from "components/button";
-import { useAuth } from "contexts/auth-context";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { useAuth } from "../../contexts/auth-context";
+import Button from "../button/Button";
 const menuLinks = [
   {
     url: "/",
@@ -101,7 +101,7 @@ const Header = () => {
               type="button"
               height="56px"
               className="header-button"
-              to="/sign-in"
+              to="/signin"
             >
               Login
             </Button>

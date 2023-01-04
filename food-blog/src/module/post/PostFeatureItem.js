@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import slugify from "slugify";
 import React from "react";
-import PostTitle from "./PostTitle";
-import PostMeta from "./PostMeta";
+import { withErrorBoundary } from "react-error-boundary";
 import PostImage from "./PostImage";
 import PostCategory from "./PostCategory";
-import { withErrorBoundary } from "react-error-boundary";
+import PostMeta from "./PostMeta";
+import PostTitle from "./PostTitle";
 
 const PostFeatureItemStyles = styled.div`
   width: 100%;

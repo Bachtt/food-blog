@@ -1,28 +1,27 @@
-import { ActionDelete, ActionEdit, ActionView } from "components/action";
-import { Button } from "components/button";
-import { Dropdown } from "components/dropdown";
-import { LabelStatus } from "components/label";
-import { Table } from "components/table";
-import { useAuth } from "contexts/auth-context";
-import { db } from "firebase-app/firebase-config";
 import {
   collection,
   deleteDoc,
-  doc,
-  getDoc,
-  getDocs,
+  doc, getDocs,
   limit,
   onSnapshot,
   query,
   startAfter,
-  where,
+  where
 } from "firebase/firestore";
 import { debounce } from "lodash";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { postStatus, userRole } from "utils/constants";
+import ActionDelete from "../../components/action/ActionDelete";
+import ActionEdit from "../../components/action/ActionEdit";
+import ActionView from "../../components/action/ActionView";
+import Button from "../../components/button/Button";
+import LabelStatus from "../../components/label/LabelStatus";
+import Table from "../../components/table/Table";
+import { useAuth } from "../../contexts/auth-context";
+import { db } from "../../firebase-app/firebase-config";
+import { postStatus, userRole } from "../../utils/constants";
+import DashboardHeading from "../dashboard/DashboardHeading";
 
 const POST_PER_PAGE = 10;
 

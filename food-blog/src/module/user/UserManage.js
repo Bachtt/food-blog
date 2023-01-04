@@ -1,8 +1,7 @@
-import { Button } from "components/button";
-import { useAuth } from "contexts/auth-context";
-import DashboardHeading from "module/dashboard/DashboardHeading";
+
 import React from "react";
-import { userRole } from "utils/constants";
+import Button from "../../components/button/Button";
+import DashboardHeading from "../dashboard/DashboardHeading";
 import UserTable from "./UserTable";
 
 const UserManage = () => {

@@ -1,4 +1,3 @@
-import { useAuth } from "contexts/auth-context";
 import {
   deleteObject,
   getDownloadURL,
@@ -8,7 +7,8 @@ import {
 } from "firebase/storage";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import { userRole } from "utils/constants";
+import { useAuth } from "../contexts/auth-context";
+import { userRole } from "../utils/constants";
 
 export default function useFirebaseImage(
   setValue,

@@ -1,8 +1,8 @@
-import { Button } from "components/button";
-import { useAuth } from "contexts/auth-context";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Button from "../../components/button/Button";
+import { useAuth } from "../../contexts/auth-context";
 const DashboardHeaderStyles = styled.div`
   background-color: white;
   padding: 20px;

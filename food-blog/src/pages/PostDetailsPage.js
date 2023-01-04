@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
-import PostRelated from "module/post/PostRelated";
-import PostMeta from "module/post/PostMeta";
-import PostImage from "module/post/PostImage";
-import PostCategory from "module/post/PostCategory";
 import PageNotFound from "./PageNotFound";
-import Layout from "components/layout/Layout";
-import AuthorBox from "components/author/AuthorBox";
 import { Link, useParams } from "react-router-dom";
-import { db } from "firebase-app/firebase-config";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-import { useAuth } from "contexts/auth-context";
-import { userRole } from "utils/constants";
+import { useAuth } from "../contexts/auth-context";
+import { userRole } from "../utils/constants";
+import { db } from "../firebase-app/firebase-config";
+import AuthorBox from "../module/author/AuthorBox";
+import Layout from "../components/layout/Layout";
+import PostCategory from "../module/post/PostCategory";
+import PostImage from "../module/post/PostImage";
+import PostMeta from "../module/post/PostMeta";
+import PostRelated from "../module/post/PostRelated";
 const PostDetailsPageStyles = styled.div`
   padding-bottom: 100px;
   .post {

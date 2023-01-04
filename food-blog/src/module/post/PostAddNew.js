@@ -1,19 +1,7 @@
-import useFirebaseImage from "hooks/useFirebaseImage";
-import Toggle from "components/toggle/Toggle";
 import slugify from "slugify";
 import React, { useEffect, useState } from "react";
-import ImageUpload from "components/image/ImageUpload";
 import { useForm } from "react-hook-form";
-import { useAuth } from "contexts/auth-context";
 import { toast } from "react-toastify";
-import { Radio } from "components/checkbox";
-import { postStatus, userRole } from "utils/constants";
-import { Label } from "components/label";
-import { Input } from "components/input";
-import { Field, FieldCheckboxes } from "components/field";
-import { Dropdown } from "components/dropdown";
-import { db } from "firebase-app/firebase-config";
-import { Button } from "components/button";
 import {
   addDoc,
   collection,
@@ -24,8 +12,21 @@ import {
   serverTimestamp,
   where,
 } from "firebase/firestore";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import Swal from "sweetalert2";
+import DashboardHeading from "../dashboard/DashboardHeading";
+import { useAuth } from "../../contexts/auth-context";
+import { db } from "../../firebase-app/firebase-config";
+import Field from "../../components/field/Field";
+import Label from "../../components/label/Label";
+import { Input } from "../../components/input";
+import ImageUpload from "../../components/image/ImageUpload";
+import Dropdown from "../../components/dropdown/Dropdown";
+import Radio from "../../components/checkbox/Radio";
+import FieldCheckboxes from "../../components/field/FieldCheckboxes";
+import Toggle from "../../components/toggle/Toggle";
+import useFirebaseImage from "../../hooks/useFirebaseImage";
+import { postStatus, userRole } from "../../utils/constants";
+import Button from "../../components/button/Button";
 
 const PostAddNew = () => {
   const { userInfo } = useAuth();

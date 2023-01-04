@@ -1,7 +1,7 @@
-import Heading from "components/layout/Heading";
-import { db } from "firebase-app/firebase-config";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import Heading from "../../components/layout/Heading";
+import { db } from "../../firebase-app/firebase-config";
 import PostItem from "./PostItem";
 
 const PostRelated = ({ categoryId = "" }) => {

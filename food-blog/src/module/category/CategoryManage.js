@@ -1,8 +1,3 @@
-import { Button } from "components/button";
-import { LabelStatus } from "components/label";
-import { Table } from "components/table";
-import { ActionView } from "drafts/action";
-import { db } from "firebase-app/firebase-config";
 import {
   collection,
   deleteDoc,
@@ -14,13 +9,20 @@ import {
   startAfter,
   where,
 } from "firebase/firestore";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import React, { useEffect, useState } from "react";
-import { categoryStatus, userRole } from "utils/constants";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { debounce } from "lodash";
-import { useAuth } from "contexts/auth-context";
+import ActionEdit from "../../components/action/ActionEdit";
+import ActionDelete from "../../components/action/ActionDelete";
+import { db } from "../../firebase-app/firebase-config";
+import { useAuth } from "../../contexts/auth-context";
+import { categoryStatus, userRole } from "../../utils/constants";
+import LabelStatus from "../../components/label/LabelStatus";
+import ActionView from "../../components/action/ActionView";
+import DashboardHeading from "../dashboard/DashboardHeading";
+import Button from "../../components/button/Button";
+import Table from "../../components/table/Table";
 
 const CATEGORY_PER_PAGE = 10;
 

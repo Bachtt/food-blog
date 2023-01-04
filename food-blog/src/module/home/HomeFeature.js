@@ -1,5 +1,3 @@
-import Heading from "components/layout/Heading";
-import { db } from "firebase-app/firebase-config";
 import {
   collection,
   limit,
@@ -7,10 +5,12 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import PostFeatureItem from "module/post/PostFeatureItem";
 import React, { useEffect, useState } from "react";
 import { withErrorBoundary } from "react-error-boundary";
 import styled from "styled-components";
+import Heading from "../../components/layout/Heading";
+import { db } from "../../firebase-app/firebase-config";
+import PostFeatureItem from "../post/PostFeatureItem";
 const HomeFeatureStyles = styled.div``;
 
 const HomeFeature = () => {

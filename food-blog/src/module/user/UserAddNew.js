@@ -1,21 +1,22 @@
-import { Button } from "components/button";
-import { Radio } from "components/checkbox";
-import { Field, FieldCheckboxes } from "components/field";
-import ImageUpload from "components/image/ImageUpload";
-import { Input } from "components/input";
-import { Label } from "components/label";
-import DashboardHeading from "module/dashboard/DashboardHeading";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { userRole, userStatus } from "utils/constants";
-import useFirebaseImage from "hooks/useFirebaseImage";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "firebase-app/firebase-config";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import slugify from "slugify";
 import { toast } from "react-toastify";
-import { useAuth } from "contexts/auth-context";
 import Swal from "sweetalert2";
+import { auth, db } from "../../firebase-app/firebase-config";
+import { useAuth } from "../../contexts/auth-context";
+import DashboardHeading from "../dashboard/DashboardHeading";
+import ImageUpload from "../../components/image/ImageUpload";
+import Field from "../../components/field/Field";
+import Label from "../../components/label/Label";
+import { Input } from "../../components/input";
+import FieldCheckboxes from "../../components/field/FieldCheckboxes";
+import Radio from "../../components/checkbox/Radio";
+import { userRole, userStatus } from "../../utils/constants";
+import Button from "../../components/button/Button";
+import useFirebaseImage from "../../hooks/useFirebaseImage";
 
 const UserAddNew = () => {
   const {

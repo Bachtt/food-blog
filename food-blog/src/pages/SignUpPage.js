@@ -1,20 +1,21 @@
 import slugify from "slugify";
 import React, { useEffect } from "react";
-import InputPasswordToggle from "components/input/InputPasswordToggle";
 import AuthenticationPage from "./AuthenticationPage";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Label } from "components/label";
-import { Input } from "components/input";
-import { Field } from "components/field";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { Button } from "components/button";
-import { auth, db } from "firebase-app/firebase-config";
-import { userRole, userStatus } from "utils/constants";
+
+import { auth, db } from "../firebase-app/firebase-config";
+import Label from "../components/label/Label";
+import { Input } from "../components/input";
+import Button from "../components/button/Button";
+import Field from "../components/field/Field";
+import InputPasswordToggle from "../components/input/InputPasswordToggle";
+import { userRole, userStatus } from "../utils/constants";
 
 const schema = yup.object({
   fullname: yup.string().required("Please enter your fullname"),
@@ -104,7 +105,7 @@ const SignUpPage = () => {
           <InputPasswordToggle control={control}></InputPasswordToggle>
         </Field>
         <div className="have-account">
-          You already have an account? <NavLink to={"/sign-in"}>Login</NavLink>{" "}
+          You already have an account? <NavLink to={"/signin"}>Login</NavLink>{" "}
         </div>
         <Button
           type="submit"

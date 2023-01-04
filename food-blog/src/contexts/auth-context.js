@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { auth, db } from "../firebase-app/firebase-config";
 
 const { createContext, useContext, useState, useEffect } = require("react");
 
@@ -38,3 +38,4 @@ function useAuth() {
   return context;
 }
 export { AuthProvider, useAuth };
+

@@ -1,6 +1,6 @@
-import { Button } from "components/button";
 import React from "react";
 import styled from "styled-components";
+import Button from "../../components/button/Button";
 
 const HomeBannerStyles = styled.div`
   min-height: 520px;
@@ -66,7 +66,7 @@ const HomeBanner = () => {
               Quaerat voluptates possimus dolorem officiis pariatur, repellat,
               cupiditate porro, quidem molestiae impedit laudantium neque quo!
             </p>
-            <Button to="/sign-up" kind="secondary" className="banner-button">
+            <Button to="/signup" kind="secondary" className="banner-button">
               Get started
             </Button>
           </div>
